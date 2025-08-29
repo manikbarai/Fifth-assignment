@@ -1,19 +1,16 @@
 // declare function
-
 function getTextValue(element){
     let num = document.getElementById(element).innerText
     return num
 }
 
 // Increment function
-
 function countIncrement(element , increment){
     let count = document.getElementById(element)
     count.innerText = parseInt(count.innerText) + increment
 }
 
 // decrement function
-
 function countDecrement(element , decrement){
     let count = document.getElementById(element)
     count.innerText = Math.max(0, parseInt(count.innerText) - decrement)
@@ -21,7 +18,6 @@ function countDecrement(element , decrement){
 
 
 // love function
-
 const love =  document.querySelectorAll('.fa-heart');
 love.forEach(love =>{
     love.style.cursor = 'pointer';
@@ -31,7 +27,6 @@ love.forEach(love =>{
 })
 
 // copy Counter
-
 function copyContent(title ,number){
     navigator.clipboard.writeText(number).then(function(){
         let copyCounter = getTextValue('copy')
@@ -44,7 +39,6 @@ function copyContent(title ,number){
 
 
 // Call Function
-
 function callNumber(title, number){
     let coins = getTextValue('coins')
 
@@ -58,7 +52,6 @@ function callNumber(title, number){
 }
 
 // call history  FUnction
-
 function callHistory(title , number){
     const listOfHistory = document.getElementById('call-history')
     const createElement = document.createElement('div')
@@ -76,7 +69,6 @@ function callHistory(title , number){
 }
 
 // History Clear Function
-
 function clearHistory(){
     const listOfHistory = document.getElementById('call-history') 
     for(let i = listOfHistory.children.length -1 ; i >=0; i--){
