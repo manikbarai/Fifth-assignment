@@ -1,20 +1,27 @@
 // declare function
+
 function getTextValue(element){
     let num = document.getElementById(element).innerText
     return num
 }
 
+// Increment function
+
 function countIncrement(element , increment){
     let count = document.getElementById(element)
     count.innerText = parseInt(count.innerText) + increment
 }
+
+// decrement function
+
 function countDecrement(element , decrement){
     let count = document.getElementById(element)
     count.innerText = Math.max(0, parseInt(count.innerText) - decrement)
 }
 
 
-// love
+// love function
+
 const love =  document.querySelectorAll('.fa-heart');
 love.forEach(love =>{
     love.style.cursor = 'pointer';
@@ -24,6 +31,7 @@ love.forEach(love =>{
 })
 
 // copy Counter
+
 function copyContent(title ,number){
     navigator.clipboard.writeText(number).then(function(){
         let copyCounter = getTextValue('copy')
@@ -35,7 +43,7 @@ function copyContent(title ,number){
 }
 
 
-// Call
+// Call Function
 
 function callNumber(title, number){
     let coins = getTextValue('coins')
@@ -49,7 +57,7 @@ function callNumber(title, number){
     alert('📞'+ title + ' এর জন্য কল করা হচ্ছে ' + " : " +number)
 }
 
-// call history
+// call history  FUnction
 
 function callHistory(title , number){
     const listOfHistory = document.getElementById('call-history')
@@ -67,7 +75,7 @@ function callHistory(title , number){
     listOfHistory.appendChild(createElement)
 }
 
-// History Clear
+// History Clear Function
 
 function clearHistory(){
     const listOfHistory = document.getElementById('call-history') 
@@ -77,6 +85,6 @@ function clearHistory(){
             listOfHistory.removeChild(child);
         }
     }
-    alert('📞🗑️ call history মুছে ফেলা হচ্ছে');
+    alert('📞🗑️ call history মুছে ফেলা হচ্ছে।');
 }
 
